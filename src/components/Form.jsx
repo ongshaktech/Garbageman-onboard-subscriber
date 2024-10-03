@@ -1,12 +1,11 @@
 import { useState } from "react";
 import logo from "../assets/images/logo.svg";
-import sideimage from "../assets/images/sideimage.svg";
+import sideimage from "../assets/images/subscriber_image.jpeg";
 import thanks from "../assets/images/thanks.svg";
 import callIcon from "../assets/images/callIcon.svg";
 import Modal from "./Modal";
 import { addDoc, collection } from "firebase/firestore";
 import { db, timeStamp } from "../firebase.config";
-import DatePicker from "react-date-picker";
 import { areas } from "./data";
 
 export default function Form() {
