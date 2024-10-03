@@ -162,13 +162,15 @@ export default function Form() {
 
       {/* Form */}
       <div className="flex flex-col md:flex-row items-center gap-20 justify-between my-10 px-4">
-        <div className="w-full md:w-1/2 bg-[#F3F3F3] p-6 flex flex-col gap-2">
+        <div className="w-full md:w-1/2 bg-[#EABD2C]/10 p-6 flex flex-col gap-2 border border-[#EABD2C] rounded-md">
           <div className="flex flex-col gap-2">
-            <label htmlFor="fName">Full Name</label>
+            <label htmlFor="fName" className="font-semibold">
+              Full Name
+            </label>
             <input
               type="text"
               placeholder="Enter your Full Name"
-              className={`bg-white p-1 rounded-sm focus:outline-none ${
+              className={`bg-white p-1 rounded-sm focus:outline-none border border-[#EABD2C] shadow-sm ${
                 detail?.name === "" && firstClick ? "border border-red-500" : ""
               }`}
               id="fName"
@@ -177,11 +179,13 @@ export default function Form() {
             />
           </div>
           <div className="flex flex-col gap-2">
-            <label htmlFor="fNumber">Mobile Number</label>
+            <label htmlFor="fNumber" className="font-semibold">
+              Mobile Number
+            </label>
             <input
               type="tel"
               placeholder="Enter your Mobile Number"
-              className={`bg-white p-1 rounded-sm focus:outline-none ${
+              className={`bg-white p-1 rounded-sm focus:outline-none border border-[#EABD2C] shadow-sm ${
                 detail?.unique_identifier === "" && firstClick
                   ? "border border-red-500"
                   : ""
@@ -194,11 +198,13 @@ export default function Form() {
             />
           </div>
           <div className="flex flex-col gap-2">
-            <label htmlFor="fEmail">Email ID</label>
+            <label htmlFor="fEmail" className="font-semibold">
+              Email ID
+            </label>
             <input
               type="email"
               placeholder="Enter your Email ID"
-              className={`bg-white p-1 rounded-sm focus:outline-none ${
+              className={`bg-white p-1 rounded-sm focus:outline-none border border-[#EABD2C] shadow-sm ${
                 detail?.email === "" && firstClick
                   ? "border border-red-500"
                   : ""
@@ -209,10 +215,12 @@ export default function Form() {
             />
           </div>
           <div className="flex flex-col gap-2">
-            <label htmlFor="fDate">Age</label>
+            <label htmlFor="fDate" className="font-semibold">
+              Age
+            </label>
             <input
               type="number"
-              className={`bg-white p-1 rounded-sm focus:outline-none ${
+              className={`bg-white p-1 rounded-sm focus:outline-none border border-[#EABD2C] shadow-sm ${
                 detail?.age_group === "" && firstClick
                   ? "border border-red-500"
                   : ""
@@ -236,7 +244,7 @@ export default function Form() {
             {/* <input
               type="date"
               placeholder="Enter your age"
-              className={`bg-white p-1 rounded-sm focus:outline-none ${
+              className={`bg-white p-1 rounded-sm focus:outline-none border border-[#EABD2C] shadow-sm ${
                 detail?.age === "" && firstClick ? "border border-red-500" : ""
               }`}
               id="fDate"
@@ -247,9 +255,11 @@ export default function Form() {
           </div>
 
           <div className="flex flex-col gap-2">
-            <label htmlFor="fCollection">Gender</label>
+            <label htmlFor="fCollection" className="font-semibold">
+              Gender
+            </label>
             <select
-              className={`bg-white p-1 rounded-sm focus:outline-none ${
+              className={`bg-white p-1 rounded-sm focus:outline-none border border-[#EABD2C] shadow-sm ${
                 detail?.gender === "" && firstClick
                   ? "border border-red-500"
                   : ""
@@ -264,11 +274,13 @@ export default function Form() {
             </select>
           </div>
           <div className="flex flex-col gap-2">
-            <label htmlFor="fMember">Total Household Members</label>
+            <label htmlFor="fMember" className="font-semibold">
+              Total Household Members
+            </label>
             <input
               type="number"
               placeholder="Enter your Total Household Members"
-              className={`bg-white p-1 rounded-sm focus:outline-none ${
+              className={`bg-white p-1 rounded-sm focus:outline-none border border-[#EABD2C] shadow-sm ${
                 detail?.household_number === "" && firstClick
                   ? "border border-red-500"
                   : ""
@@ -285,9 +297,11 @@ export default function Form() {
           </div>
 
           <div className="flex flex-col gap-2">
-            <label htmlFor="fArea">Area</label>
+            <label htmlFor="fArea" className="font-semibold">
+              Area
+            </label>
             <select
-              className={`bg-white p-1 rounded-sm focus:outline-none ${
+              className={`bg-white p-1 rounded-sm focus:outline-none border border-[#EABD2C] shadow-sm ${
                 detail?.area_id === "" && firstClick
                   ? "border border-red-500"
                   : ""
@@ -306,11 +320,13 @@ export default function Form() {
             </select>
           </div>
           <div className="flex flex-col gap-2">
-            <label htmlFor="fMember">Address</label>
+            <label htmlFor="fMember" className="font-semibold">
+              Address
+            </label>
             <input
               type="text"
               placeholder="Enter your Address"
-              className={`bg-white p-1 rounded-sm focus:outline-none ${
+              className={`bg-white p-1 rounded-sm focus:outline-none border border-[#EABD2C] shadow-sm ${
                 detail?.address === "" && firstClick
                   ? "border border-red-500"
                   : ""
@@ -323,9 +339,11 @@ export default function Form() {
             />
           </div>
           <div className="flex flex-col gap-2">
-            <label htmlFor="fCollection">Collection Frequency</label>
+            <label htmlFor="fCollection" className="font-semibold">
+              Collection Frequency
+            </label>
             <select
-              className={`bg-white p-1 rounded-sm focus:outline-none ${
+              className={`bg-white p-1 rounded-sm focus:outline-none border border-[#EABD2C] shadow-sm ${
                 detail?.discaed_waste_interval === "" && firstClick
                   ? "border border-red-500"
                   : ""
@@ -353,9 +371,21 @@ export default function Form() {
             </button>
           </div>
         </div>
-        <div className="hidden md:block w-full md:w-1/2">
-          <img src={sideimage} alt="sideimage" />
+        {/* <div className="hidden md:block w-full md:w-1/2 "> */}
+        <div className="relative flex-1 w-full  mx-0 md:mx-4">
+          <div className="absolute -inset-4">
+            <div
+              className="w-full h-full mx-auto rotate-180 opacity-20 blur-lg filter"
+              style={{
+                background: `linear-gradient(90deg, #EABD2C -0.55%, #44b0ff 22.86%, #008000 48.36%, #008000 73.33%, #ebff70 99.34%)`,
+              }}
+            ></div>
+          </div>
+          <div className="relative overflow-hidden bg-white border-0 border-gray-200 rounded-2xl">
+            <img src={sideimage} className="w-full" alt="sideimage" />
+          </div>
         </div>
+        {/* </div> */}
       </div>
 
       {/* Conditional component */}
