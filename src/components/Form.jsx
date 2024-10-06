@@ -7,6 +7,7 @@ import Modal from "./Modal";
 import { addDoc, collection } from "firebase/firestore";
 import { db, timeStamp } from "../firebase.config";
 import { areas } from "./data";
+import DatePicker from "react-date-picker";
 
 export default function Form() {
   const [showModal, setShowModal] = useState(false);
@@ -149,6 +150,8 @@ export default function Form() {
     }
   };
 
+  console.log("Details", detail);
+
   return (
     <div className="min-h-screen max-w-7xl mx-auto pt-2">
       <div className="flex flex-col md:flex-row  items-center md:items-end px-4">
@@ -218,8 +221,8 @@ export default function Form() {
             <label htmlFor="fDate" className="font-semibold">
               Age
             </label>
-            <input
-              type="number"
+            {/* <input
+              type="date"
               className={`bg-white p-1 rounded-sm focus:outline-none border border-[#EABD2C] shadow-sm ${
                 detail?.age_group === "" && firstClick
                   ? "border border-red-500"
@@ -230,8 +233,8 @@ export default function Form() {
               onChange={(e) =>
                 setDetail({ ...detail, age_group: e.target.value })
               }
-            />
-            {/* <DatePicker
+            /> */}
+            <DatePicker
               style={{ border: "none" }}
               className={`bg-white p-1 rounded-sm border-none focus:outline-none ${
                 detail?.age_group === "" && firstClick
@@ -240,7 +243,7 @@ export default function Form() {
               }`}
               value={detail.age_group}
               onChange={(date) => setDetail({ ...detail, age_group: date })}
-            /> */}
+            />
             {/* <input
               type="date"
               placeholder="Enter your age"
@@ -308,15 +311,16 @@ export default function Form() {
               }`}
               value={detail.area_id}
               onChange={(e) =>
-                setDetail({ ...detail, area_id: Number(e.target.value) })
+                setDetail({ ...detail, area_id: e.target.value })
               }
             >
               <option value="">Select area</option>
               {areas?.map((area) => (
-                <option value={area?.id} key={area?.id}>
+                <option value={area?.name} key={area?.id}>
                   {area?.name}
                 </option>
               ))}
+              <option value="others">Others</option>
             </select>
           </div>
           <div className="flex flex-col gap-2">
