@@ -219,7 +219,7 @@ export default function Form() {
           </div>
           <div className="flex flex-col gap-2">
             <label htmlFor="fDate" className="font-semibold">
-              Age
+              Date of Birth
             </label>
             {/* <input
               type="date"
